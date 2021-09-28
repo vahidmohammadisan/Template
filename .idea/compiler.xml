@@ -2,6 +2,7 @@
 <project version="4">
   <component name="CompilerConfiguration">
     <bytecodeTargetLevel target="1.8">
+      <module name="vocabulary.data" target="11" />
       <module name="vocabulary.presentation" target="11" />
     </bytecodeTargetLevel>
   </component>
