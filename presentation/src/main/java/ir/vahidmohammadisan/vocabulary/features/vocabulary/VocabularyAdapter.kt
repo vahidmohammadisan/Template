@@ -1,36 +1,30 @@
 package ir.vahidmohammadisan.vocabulary.features.vocabulary
 
 import android.view.LayoutInflater
+import android.view.View
 import android.view.ViewGroup
+import android.widget.TextView
+import androidx.annotation.NonNull
 import androidx.recyclerview.widget.RecyclerView
 import ir.vahidmohammadisan.domain.model.Vocabs
 import ir.vahidmohammadisan.vocabulary.R
-import ir.vahidmohammadisan.vocabulary.databinding.AdapterVocabularyBinding
 
-class VocabularyAdapter(
-    private val vocabs: List<Vocabs>,
-) : RecyclerView.Adapter<VocabularyAdapter.ViewHolder>() {
-
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int) = ViewHolder(
-        AdapterVocabularyBinding.inflate(
-            LayoutInflater.from(parent.context),
-            parent,
-            false
-        )
-    )
-
-    override fun onBindViewHolder(holder: ViewHolder, position: Int) {
-        with(holder.binding) {
-            root.removeAllViews()
-            vocabs.forEach {
-                holder.binding.word.text = it.word
-            }
-        }
+internal class VocabularyAdapter(private var itemsList: List<Vocabs>) :
+    RecyclerView.Adapter<VocabularyAdapter.MyViewHolder>() {
+    internal inner class MyViewHolder(view: View) : RecyclerView.ViewHolder(view) {
+        var itemTextView: TextView = view.findViewById(R.id.word)
     }
-
-    override fun getItemViewType(position: Int) = R.layout.adapter_vocabulary
-
-    override fun getItemCount() = vocabs.size
-
-    class ViewHolder(val binding: AdapterVocabularyBinding) : RecyclerView.ViewHolder(binding.root)
+    @NonNull
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MyViewHolder {
+        val itemView = LayoutInflater.from(parent.context)
+            .inflate(R.layout.adapter_vocabulary, parent, false)
+        return MyViewHolder(itemView)
+    }
+    override fun onBindViewHolder(holder: MyViewHolder, position: Int) {
+        val item = itemsList[position]
+        holder.itemTextView.text = item.word
+    }
+    override fun getItemCount(): Int {
+        return itemsList.size
+    }
 }

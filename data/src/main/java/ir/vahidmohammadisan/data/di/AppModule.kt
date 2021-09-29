@@ -21,6 +21,7 @@ abstract class AppModule {
             @ApplicationContext context: Context,
         ) = Room.databaseBuilder(context, AppDatabase::class.java, "database")
             .fallbackToDestructiveMigration()
+            .allowMainThreadQueries()
             .build()
     }
 }
