@@ -7,7 +7,7 @@ import kotlinx.coroutines.flow.Flow
 import javax.inject.Inject
 
 class GetVocabularyUseCase @Inject constructor(private val vocabularyRepository: VocabularyRepository) :
-    UseCase<Unit, Flow<List<Vocabs>>> {
+    UseCase<Unit,@JvmSuppressWildcards Flow<List<Vocabs>>> {
     override fun execute(params: Unit): Flow<List<Vocabs>> {
         return vocabularyRepository.getVocabulary()
     }

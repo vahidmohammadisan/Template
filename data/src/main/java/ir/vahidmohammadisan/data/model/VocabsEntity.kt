@@ -7,7 +7,7 @@ import ir.vahidmohammadisan.domain.model.Vocabs
 
 @Entity
 data class VocabsEntity(
-    @ColumnInfo(name = "word") val word: String,
+    @ColumnInfo(name = "word") @PrimaryKey val word: String,
     @ColumnInfo(name = "type") val type: String,
     @ColumnInfo(name = "sentenceOne") val sentenceOne: String,
     @ColumnInfo(name = "sentenceTwo") val sentenceTwo: String,
