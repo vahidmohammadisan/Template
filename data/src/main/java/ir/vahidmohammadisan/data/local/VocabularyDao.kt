@@ -15,5 +15,5 @@ interface VocabularyDao {
     fun getVocabulary(): Flow<List<VocabsEntity>>
 
     @Insert(onConflict = OnConflictStrategy.REPLACE)
-    fun saveVocabulary(vocabs: Vocabs)
+    fun saveVocabulary(vocabsEntity: VocabsEntity)
 }
