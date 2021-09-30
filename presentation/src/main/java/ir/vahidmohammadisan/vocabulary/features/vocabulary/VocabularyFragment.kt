@@ -1,7 +1,6 @@
 package ir.vahidmohammadisan.vocabulary.features.vocabulary
 
 import android.os.Bundle
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -11,7 +10,6 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import dagger.hilt.android.AndroidEntryPoint
 import ir.vahidmohammadisan.domain.model.Vocabs
 import ir.vahidmohammadisan.vocabulary.databinding.FragmentVocabularyBinding
-import kotlinx.coroutines.flow.map
 
 @AndroidEntryPoint
 class VocabularyFragment : Fragment() {
@@ -38,15 +36,18 @@ class VocabularyFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
         postponeEnterTransition()
 
-        viewModel.insertVocabulary()
-
         binding.recyclerView.layoutManager = LinearLayoutManager(activity)
 
         viewModel.vocabularyList.observe(viewLifecycleOwner, {
             list = it
-            binding.recyclerView.adapter=vocabularyAdapter
+            binding.recyclerView.adapter = vocabularyAdapter
             vocabularyAdapter.notifyDataSetChanged()
         })
+
+        binding.btnAddVocabulary.setOnClickListener {
+            val addVocabularyFragment = AddVocabularyFragment()
+            addVocabularyFragment.show(requireActivity().supportFragmentManager, addVocabularyFragment.tag)
+        }
 
     }
 

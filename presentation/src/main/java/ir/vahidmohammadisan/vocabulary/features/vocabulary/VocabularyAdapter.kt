@@ -12,7 +12,11 @@ import ir.vahidmohammadisan.vocabulary.R
 internal class VocabularyAdapter(private var itemsList: List<Vocabs>) :
     RecyclerView.Adapter<VocabularyAdapter.MyViewHolder>() {
     internal inner class MyViewHolder(view: View) : RecyclerView.ViewHolder(view) {
-        var itemTextView: TextView = view.findViewById(R.id.word)
+        var word: TextView = view.findViewById(R.id.word)
+        var type: TextView = view.findViewById(R.id.type)
+        var s_one: TextView = view.findViewById(R.id.s_one)
+        var s_two: TextView = view.findViewById(R.id.s_two)
+        var s_three: TextView = view.findViewById(R.id.s_three)
     }
     @NonNull
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MyViewHolder {
@@ -22,7 +26,11 @@ internal class VocabularyAdapter(private var itemsList: List<Vocabs>) :
     }
     override fun onBindViewHolder(holder: MyViewHolder, position: Int) {
         val item = itemsList[position]
-        holder.itemTextView.text = item.word
+        holder.word.text = item.word
+        holder.type.text = item.type
+        holder.s_one.text = "sentence1: "+item.sentenceOne
+        holder.s_two.text = "sentence2: "+item.sentenceTwo
+        holder.s_three.text = "sentence3: "+item.sentenceThree
     }
     override fun getItemCount(): Int {
         return itemsList.size
