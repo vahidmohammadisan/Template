@@ -4,14 +4,18 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
+import androidx.navigation.Navigation
+import androidx.navigation.fragment.findNavController
 import com.google.android.material.bottomsheet.BottomSheetDialogFragment
 import dagger.hilt.android.AndroidEntryPoint
 import ir.vahidmohammadisan.domain.model.Vocabs
+import ir.vahidmohammadisan.vocabulary.R
 import ir.vahidmohammadisan.vocabulary.databinding.FragmentAddVocabularyBinding
 
 @AndroidEntryPoint
-class AddVocabularyFragment : BottomSheetDialogFragment() {
+class AddVocabularyFragment : Fragment() {
 
     private val viewModel by viewModels<VocabularyViewModel>()
     private var binding: FragmentAddVocabularyBinding? = null
@@ -36,8 +40,11 @@ class AddVocabularyFragment : BottomSheetDialogFragment() {
                     binding!!.sTwo.text.toString(),
                     binding!!.sThree.text.toString()
                 )
-            )
-            dismiss()
+            ).also {
+                Navigation.findNavController(requireActivity(), R.id.nav_host_fragment)
+                    .navigate(R.id.vocabularyFragment)
+            }
+
         }
     }
 }

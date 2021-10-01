@@ -6,9 +6,11 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
+import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import dagger.hilt.android.AndroidEntryPoint
 import ir.vahidmohammadisan.domain.model.Vocabs
+import ir.vahidmohammadisan.vocabulary.R
 import ir.vahidmohammadisan.vocabulary.databinding.FragmentVocabularyBinding
 
 @AndroidEntryPoint
@@ -45,8 +47,7 @@ class VocabularyFragment : Fragment() {
         })
 
         binding.btnAddVocabulary.setOnClickListener {
-            val addVocabularyFragment = AddVocabularyFragment()
-            addVocabularyFragment.show(requireActivity().supportFragmentManager, addVocabularyFragment.tag)
+           findNavController().navigate(R.id.action_vocabularyFragment_to_addVocabularyFragment)
         }
 
     }
