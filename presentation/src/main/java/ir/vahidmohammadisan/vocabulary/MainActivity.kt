@@ -2,6 +2,7 @@ package ir.vahidmohammadisan.vocabulary
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
+import androidx.navigation.Navigation.findNavController
 import dagger.hilt.android.AndroidEntryPoint
 import ir.vahidmohammadisan.vocabulary.databinding.ActivityMainBinding
 
@@ -16,4 +17,7 @@ class MainActivity : AppCompatActivity() {
         setContentView(binding.root)
 
     }
+
+    override fun onSupportNavigateUp() =
+        findNavController(this, R.id.nav_host_fragment).navigateUp()
 }

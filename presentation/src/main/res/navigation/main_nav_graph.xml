@@ -14,12 +14,12 @@
             android:id="@+id/action_vocabularyFragment_to_addVocabularyFragment"
             app:destination="@id/addVocabularyFragment" />
     </fragment>
+
     <fragment
         android:id="@+id/addVocabularyFragment"
         android:name="ir.vahidmohammadisan.vocabulary.features.vocabulary.AddVocabularyFragment"
-        android:label="AddVocabularyFragment" >
-        <action
-            android:id="@+id/action_addVocabularyFragment_to_vocabularyFragment"
-            app:destination="@id/vocabularyFragment" />
+        android:label="fragment_add_vocabulary"
+        tools:layout="@layout/fragment_add_vocabulary" >
     </fragment>
+
 </navigation>

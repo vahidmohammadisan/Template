@@ -7,6 +7,7 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import androidx.navigation.Navigation
+import androidx.navigation.findNavController
 import androidx.navigation.fragment.findNavController
 import com.google.android.material.bottomsheet.BottomSheetDialogFragment
 import dagger.hilt.android.AndroidEntryPoint
@@ -40,10 +41,8 @@ class AddVocabularyFragment : Fragment() {
                     binding!!.sTwo.text.toString(),
                     binding!!.sThree.text.toString()
                 )
-            ).also {
-                Navigation.findNavController(requireActivity(), R.id.nav_host_fragment)
-                    .navigate(R.id.vocabularyFragment)
-            }
+            )
+            //findNavController().navigate(R.id.vocabularyFragment)
 
         }
     }
