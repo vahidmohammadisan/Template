@@ -4,57 +4,44 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
-import androidx.navigation.findNavController
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import dagger.hilt.android.AndroidEntryPoint
 import ir.vahidmohammadisan.domain.model.Vocabs
 import ir.vahidmohammadisan.vocabulary.R
 import ir.vahidmohammadisan.vocabulary.databinding.FragmentVocabularyBinding
+import ir.vahidmohammadisan.vocabulary.features.base.fragment.BaseFragment
 
 @AndroidEntryPoint
-class VocabularyFragment : Fragment() {
+class VocabularyFragment : BaseFragment<FragmentVocabularyBinding>() {
 
     private val viewModel by viewModels<VocabularyViewModel>()
-    private var _binding: FragmentVocabularyBinding? = null
-    private val binding get() = _binding!!
     private lateinit var list: List<Vocabs>
+
+    override val bindingInflater: (LayoutInflater, ViewGroup?, Boolean) -> FragmentVocabularyBinding
+        get() = FragmentVocabularyBinding::inflate
 
     private val vocabularyAdapter by lazy {
         VocabularyAdapter(list)
     }
 
-    override fun onCreateView(
-        inflater: LayoutInflater,
-        container: ViewGroup?,
-        savedInstanceState: Bundle?
-    ): View {
-        _binding = FragmentVocabularyBinding.inflate(layoutInflater, container, false)
-        return binding.root
-    }
-
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+
         postponeEnterTransition()
 
-        binding.recyclerView.layoutManager = LinearLayoutManager(activity)
+        _binding?.recyclerView?.layoutManager = LinearLayoutManager(activity)
 
         viewModel.vocabularyList.observe(viewLifecycleOwner, {
             list = it
-            binding.recyclerView.adapter = vocabularyAdapter
+            _binding?.recyclerView?.adapter = vocabularyAdapter
             vocabularyAdapter.notifyDataSetChanged()
         })
 
-        binding.btnAddVocabulary.setOnClickListener {
-            findNavController().navigate(R.id.addVocabularyFragment)
+        _binding?.btnAddVocabulary?.setOnClickListener {
+            findNavController().navigate(R.id.action_vocabularyFragment_to_addVocabularyFragment)
         }
 
-    }
-
-    override fun onDestroyView() {
-        super.onDestroyView()
-        _binding = null
     }
 }
