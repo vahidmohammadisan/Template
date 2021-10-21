@@ -6,6 +6,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.viewModels
 import androidx.navigation.fragment.findNavController
+import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
 import dagger.hilt.android.AndroidEntryPoint
 import ir.vahidmohammadisan.domain.model.Vocabs
@@ -31,7 +32,7 @@ class VocabularyFragment : BaseFragment<FragmentVocabularyBinding>() {
 
         postponeEnterTransition()
 
-        _binding?.recyclerView?.layoutManager = LinearLayoutManager(activity)
+        _binding?.recyclerView?.layoutManager = GridLayoutManager(activity, resources.getInteger(R.integer.media_columns))
 
         viewModel.vocabularyList.observe(viewLifecycleOwner, {
             list = it

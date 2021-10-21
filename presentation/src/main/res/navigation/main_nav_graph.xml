@@ -12,7 +12,14 @@
         tools:layout="@layout/fragment_vocabulary" >
         <action
             android:id="@+id/action_vocabularyFragment_to_addVocabularyFragment"
-            app:destination="@id/addVocabularyFragment" />
+            app:destination="@id/addVocabularyFragment"
+            app:popUpTo="@+id/vocabularyFragment"
+            app:popUpToInclusive="true"/>
+        <action
+            android:id="@+id/action_vocabularyFragment_to_vocabularyDetailsFragment"
+            app:destination="@id/vocabularyDetailsFragment"
+            app:popUpTo="@+id/vocabularyFragment"
+            app:popUpToInclusive="true"/>
     </fragment>
 
     <fragment
@@ -21,5 +28,9 @@
         android:label="fragment_add_vocabulary"
         tools:layout="@layout/fragment_add_vocabulary" >
     </fragment>
+    <fragment
+        android:id="@+id/vocabularyDetailsFragment"
+        android:name="ir.vahidmohammadisan.vocabulary.features.vocabulary.VocabularyDetailsFragment"
+        android:label="VocabularyDetailsFragment" />
 
 </navigation>
