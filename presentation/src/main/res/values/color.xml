@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!--LIGHT COLOR THEME-->
+
+    <!--colorPrimary colors map to components and elements, such as app bars and buttons. -->
+    <!--colorSecondary colors are most often used as accents on components, such as FABs and -->
+    <!--selection controls.-->
+    <color name="color_primary_blue">#1157d0</color>
+    <color name="color_primary_variant_blue">#002f9e</color>
+
+    <color name="color_primary_red">#d50000</color>
+    <color name="color_primary_variant_red">#9b0000</color>
+
+    <color name="color_primary_green">#3DDC84</color>
+    <color name="color_primary_variant_green">#00a956</color>
+
+    <!--colorBackground appears behind scrollable content and is used for the default window-->
+    <!--background. colorSurface is mapped to the surface of components such as cards, sheets-->
+    <!--and menus. colorError is used to indicate an error state for components such as-->
+    <!--text fields.-->
+    <color name="color_background">#ffffff</color>
+    <color name="color_surface">#ffffff</color>
+    <color name="color_error">#b00020</color>
+
+    <!--"On" colors define how text, icons and strokes are colored in relation to the surface-->
+    <!--on which they appear.-->
+    <color name="color_on_primary">#ffffff</color>
+    <color name="color_on_secondary">#121212</color>
+    <color name="color_on_background">#121212</color>
+    <color name="color_on_surface">#121212</color>
+    <color name="color_on_error">#ffffff</color>
+
+    <color name="color_progress_indicator">@color/color_primary_blue</color>
+
+    <color name="color_alpha_12">#1F000000</color>
+    <color name="color_alpha_20">#33FFFFFF</color>
+    <color name="color_alpha_20_dark">#33000000</color>
+    <color name="transparent">#00FFFFFF</color>
+</resources>
+

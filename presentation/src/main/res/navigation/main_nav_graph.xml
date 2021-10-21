@@ -10,27 +10,34 @@
         android:name="ir.vahidmohammadisan.vocabulary.features.vocabulary.VocabularyFragment"
         android:label="fragment_vocabulary"
         tools:layout="@layout/fragment_vocabulary" >
+
         <action
             android:id="@+id/action_vocabularyFragment_to_addVocabularyFragment"
             app:destination="@id/addVocabularyFragment"
             app:popUpTo="@+id/vocabularyFragment"
-            app:popUpToInclusive="true"/>
+            app:popUpToInclusive="false"/>
         <action
             android:id="@+id/action_vocabularyFragment_to_vocabularyDetailsFragment"
             app:destination="@id/vocabularyDetailsFragment"
             app:popUpTo="@+id/vocabularyFragment"
-            app:popUpToInclusive="true"/>
+            app:popUpToInclusive="false"/>
     </fragment>
 
     <fragment
         android:id="@+id/addVocabularyFragment"
         android:name="ir.vahidmohammadisan.vocabulary.features.vocabulary.AddVocabularyFragment"
         android:label="fragment_add_vocabulary"
-        tools:layout="@layout/fragment_add_vocabulary" >
+        tools:layout="@layout/fragment_add_vocabulary"
+        app:popUpTo="@id/vocabularyFragment">
     </fragment>
     <fragment
         android:id="@+id/vocabularyDetailsFragment"
         android:name="ir.vahidmohammadisan.vocabulary.features.vocabulary.VocabularyDetailsFragment"
         android:label="VocabularyDetailsFragment" />
+    <fragment
+        android:id="@+id/settingFragment"
+        android:name="ir.vahidmohammadisan.vocabulary.features.setting.SettingFragment"
+        android:label="SettingFragment"
+        tools:layout="@layout/fragment_setting"/>
 
 </navigation>

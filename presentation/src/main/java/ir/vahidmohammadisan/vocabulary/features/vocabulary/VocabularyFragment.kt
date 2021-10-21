@@ -4,10 +4,14 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.viewModels
 import androidx.navigation.fragment.findNavController
+import androidx.navigation.ui.AppBarConfiguration
+import androidx.navigation.ui.NavigationUI
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.transition.TransitionInflater
 import dagger.hilt.android.AndroidEntryPoint
 import ir.vahidmohammadisan.domain.model.Vocabs
 import ir.vahidmohammadisan.vocabulary.R
@@ -30,7 +34,7 @@ class VocabularyFragment : BaseFragment<FragmentVocabularyBinding>() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        postponeEnterTransition()
+        setupToolbar()
 
         _binding?.recyclerView?.layoutManager = GridLayoutManager(activity, resources.getInteger(R.integer.media_columns))
 
@@ -45,4 +49,15 @@ class VocabularyFragment : BaseFragment<FragmentVocabularyBinding>() {
         }
 
     }
+
+    private fun setupToolbar() {
+        (activity as? AppCompatActivity)?.setSupportActionBar(_binding?.layoutToolbar!!.toolbar)
+        NavigationUI.setupWithNavController(
+            _binding?.layoutToolbar!!.collapsingToolbarLayout,
+            _binding?.layoutToolbar!!.toolbar,
+            findNavController(),
+            AppBarConfiguration.Builder(R.id.vocabularyFragment, R.id.settingFragment).build()
+        )
+    }
+
 }
