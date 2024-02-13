@@ -1,8 +1,8 @@
-Clean modular Architector
+Clean modular
 Jetpack Compose
-convention
-version catalog
-MVI
+conventions
+version catalogs
+MVI-Redux
 Hilt DI
 Kotlin
 Coroutines
