@@ -2,7 +2,7 @@ Clean modular
 Jetpack Compose
 conventions
 version catalogs
-MVI-Redux
+MVI
 Hilt DI
 Kotlin
 Coroutines
