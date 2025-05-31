@@ -1,0 +1,256 @@
+[
+  {
+    "id": "deposit_intro_001",
+    "main_title": "روش‌های فعال واریز تومان نوبیتکس در یک نگاه",
+    "title": "روش‌های فعال واریز تومان در نوبیتکس",
+    "platforms": [
+      "Android",
+      "Web",
+      "Ios"
+    ],
+    "cta": "متوجه شدم",
+    "cta_link": "",
+    "steps": [
+      {
+        "feature_flags": [
+          "DirectDebit"
+        ],
+        "subtitle": "واریز مستقیم",
+        "subtitle_media": {
+          "media_type": "icon",
+          "dark_media_url": "https://cdn.nobitex.ir/marketing/DynamicPromotionAssets/RialDepositAssets/direct-debit_outlined.svg",
+          "light_media_url": "https://cdn.nobitex.ir/marketing/DynamicPromotionAssets/RialDepositAssets/direct-debit_outlined.svg"
+        },
+        "description": "واریز سریع و امن، با یک بار اتصال حساب بانکی خود",
+        "texts": [
+          {
+            "icon": "https://cdn.nobitex.ir/marketing/DynamicPromotionAssets/RialDepositAssets/align-top-01_outlined.svg",
+            "text": "با توجه به محدودیت هر بانک تا ۱۵ میلیون تومان"
+          },
+          {
+            "icon": "https://cdn.nobitex.ir/marketing/DynamicPromotionAssets/RialDepositAssets/clock-stopwatch_outlined.svg",
+            "text": "واریز آنی به‌صورت خودکار"
+          },
+          {
+            "icon": "https://cdn.nobitex.ir/marketing/DynamicPromotionAssets/RialDepositAssets/bank_outlined.svg",
+            "text": "در حال حاضر پشتیبانی از ۱۱ بانک"
+          }
+        ],
+        "cta": {
+          "url": "/panel/balance/deposit/direct-debit/",
+          "text": "برو به واریز مستقیم"
+        }
+      },
+      {
+        "feature_flags": [
+          "CorporateBanking"
+        ],
+        "subtitle": "واریز حساب به حساب",
+        "subtitle_media": {
+          "media_type": "icon",
+          "dark_media_url":"https://cdn.nobitex.ir/marketing/DynamicPromotionAssets/RialDepositAssets/bank_outlined.svg",
+          "light_media_url":"https://cdn.nobitex.ir/marketing/DynamicPromotionAssets/RialDepositAssets/bank_outlined.svg"
+        },
+        "description": "انتقال درون بانکی به شماره حساب نوبیتکس",
+        "texts": [
+          {
+            "icon": "https://cdn.nobitex.ir/marketing/DynamicPromotionAssets/RialDepositAssets/align-top-01_outlined.svg",            "text": "سقف واریز با توجه به سقف انتقال وجه بانک شما"
+          },
+          {
+            "icon": "https://cdn.nobitex.ir/marketing/DynamicPromotionAssets/RialDepositAssets/clock-stopwatch_outlined.svg",
+            "text": "حداکثر ۳۰ دقیقه و به‌صورت خودکار"
+          },
+          {
+            "icon": "https://cdn.nobitex.ir/marketing/DynamicPromotionAssets/RialDepositAssets/bank_outlined.svg",
+            "text": "در حال حاضر پشتیبانی از ۴ بانک"
+          }
+        ],
+        "cta": {
+          "url": "/panel/balance/deposit/cobank/",
+          "text": "برو به واریز حساب به حساب"
+        }
+      },
+      {
+        "feature_flags": [],
+        "subtitle": "واریز شناسه‌دار",
+        "subtitle_media": {
+          "media_type": "icon",
+          "dark_media_url": "https://cdn.nobitex.ir/marketing/DynamicPromotionAssets/RialDepositAssets/receipt-check_outlined.svg",
+          "light_media_url": "https://cdn.nobitex.ir/marketing/DynamicPromotionAssets/RialDepositAssets/receipt-check_outlined.svg"
+        },
+        "description": "انتقال از روش پایا با شناسه‌‌ی اختصاصی خود",
+        "texts": [
+          {
+            "icon": "https://cdn.nobitex.ir/marketing/DynamicPromotionAssets/RialDepositAssets/align-top-01_outlined.svg",            "text": "سقف واریز با توجه به سقف انتقال وجه بانک شما"
+          },
+          {
+            "icon": "https://cdn.nobitex.ir/marketing/DynamicPromotionAssets/RialDepositAssets/clock-stopwatch_outlined.svg",
+            "text": "تابع سیکل‌های پایا و به‌صورت خودکار"
+          },
+          {
+            "icon": "https://cdn.nobitex.ir/marketing/DynamicPromotionAssets/RialDepositAssets/bank_outlined.svg",
+            "text": "پشتیبانی از همه‌ی بانک‌ها"
+          }
+        ],
+        "cta": {
+          "url": "/panel/balance/deposit/verified/",
+          "text": "برو به واریز شناسه‌دار"
+        }
+      },
+      {
+        "feature_flags": ["CobankCards"],
+        "subtitle": "واریز کارت به کارت",
+        "subtitle_media": {
+          "media_type": "icon",
+          "dark_media_url": "https://cdn.nobitex.ir/marketing/DynamicPromotionAssets/RialDepositAssets/credit-card-01_outlined.svg",
+          "light_media_url": "https://cdn.nobitex.ir/marketing/DynamicPromotionAssets/RialDepositAssets/credit-card-01_outlined.svg"
+        },
+        "description": "انتقال وجه از روش کارت به کارت بدون محدودیت",
+        "texts": [
+          {
+            "icon": "https://cdn.nobitex.ir/marketing/DynamicPromotionAssets/RialDepositAssets/align-top-01_outlined.svg",            "text": "۱۰ میلیون تومان به ازای هر کارت"
+          },
+          {
+            "icon": "https://cdn.nobitex.ir/marketing/DynamicPromotionAssets/RialDepositAssets/clock-stopwatch_outlined.svg",
+            "text": "حداکثر ۳۰ دقیقه و به صورت خودکار"
+          },
+          {
+            "icon": "https://cdn.nobitex.ir/marketing/DynamicPromotionAssets/RialDepositAssets/bank_outlined.svg",
+            "text": "پشتیبانی از تمام بانک‌ها و اپلیکیشن‌های بانکی"
+          }
+        ],
+        "cta": {
+          "url": "/panel/balance/deposit/card-to-card/",
+          "text": "برو به واریز کارت به کارت"
+        }
+      }
+    ]
+  },
+ {
+    "id": "deposit_intro_002",
+    "main_title": "روش‌های فعال واریز تومان نوبیتکس در یک نگاه",
+    "title": "روش‌های فعال واریز تومان در نوبیتکس",
+    "platforms": [
+      "Android",
+      "Web",
+      "Ios"
+    ],
+    "cta": "متوجه شدم",
+    "cta_link": "",
+    "steps": [
+      {
+        "feature_flags": [
+          "DirectDebit"
+        ],
+        "subtitle": "واریز مستقیم",
+        "subtitle_media": {
+          "media_type": "icon",
+          "dark_media_url": "https://cdn.nobitex.ir/marketing/DynamicPromotionAssets/RialDepositAssets/direct-debit_outlined.svg",
+          "light_media_url": "https://cdn.nobitex.ir/marketing/DynamicPromotionAssets/RialDepositAssets/direct-debit_outlined.svg"
+        },
+        "description": "واریز سریع و امن، با یک بار اتصال حساب بانکی خود",
+        "texts": [
+          {
+            "icon": "https://cdn.nobitex.ir/marketing/DynamicPromotionAssets/RialDepositAssets/align-top-01_outlined.svg",
+            "text": "با توجه به محدودیت هر بانک تا ۱۵ میلیون تومان"
+          },
+          {
+            "icon": "https://cdn.nobitex.ir/marketing/DynamicPromotionAssets/RialDepositAssets/clock-stopwatch_outlined.svg",
+            "text": "واریز آنی به‌صورت خودکار"
+          },
+          {
+            "icon": "https://cdn.nobitex.ir/marketing/DynamicPromotionAssets/RialDepositAssets/bank_outlined.svg",
+            "text": "در حال حاضر پشتیبانی از ۱۱ بانک"
+          }
+        ],
+        "cta": {
+          "url": "/panel/balance/deposit/direct-debit/",
+          "text": "برو به واریز مستقیم"
+        }
+      },
+      {
+        "feature_flags": [
+          "CorporateBanking"
+        ],
+        "subtitle": "واریز حساب به حساب",
+        "subtitle_media": {
+          "media_type": "icon",
+          "dark_media_url":"https://cdn.nobitex.ir/marketing/DynamicPromotionAssets/RialDepositAssets/bank_outlined.svg",
+          "light_media_url":"https://cdn.nobitex.ir/marketing/DynamicPromotionAssets/RialDepositAssets/bank_outlined.svg"
+        },
+        "description": "انتقال درون بانکی به شماره حساب نوبیتکس",
+        "texts": [
+          {
+            "icon": "https://cdn.nobitex.ir/marketing/DynamicPromotionAssets/RialDepositAssets/align-top-01_outlined.svg",            "text": "سقف واریز با توجه به سقف انتقال وجه بانک شما"
+          },
+          {
+            "icon": "https://cdn.nobitex.ir/marketing/DynamicPromotionAssets/RialDepositAssets/clock-stopwatch_outlined.svg",
+            "text": "حداکثر ۳۰ دقیقه و به‌صورت خودکار"
+          },
+          {
+            "icon": "https://cdn.nobitex.ir/marketing/DynamicPromotionAssets/RialDepositAssets/bank_outlined.svg",
+            "text": "در حال حاضر پشتیبانی از ۴ بانک"
+          }
+        ],
+        "cta": {
+          "url": "/panel/balance/deposit/cobank/",
+          "text": "برو به واریز حساب به حساب"
+        }
+      },
+      {
+        "feature_flags": [],
+        "subtitle": "واریز شناسه‌دار",
+        "subtitle_media": {
+          "media_type": "icon",
+          "dark_media_url": "https://cdn.nobitex.ir/marketing/DynamicPromotionAssets/RialDepositAssets/receipt-check_outlined.svg",
+          "light_media_url": "https://cdn.nobitex.ir/marketing/DynamicPromotionAssets/RialDepositAssets/receipt-check_outlined.svg"
+        },
+        "description": "انتقال از روش پایا با شناسه‌‌ی اختصاصی خود",
+        "texts": [
+          {
+            "icon": "https://cdn.nobitex.ir/marketing/DynamicPromotionAssets/RialDepositAssets/align-top-01_outlined.svg",            "text": "سقف واریز با توجه به سقف انتقال وجه بانک شما"
+          },
+          {
+            "icon": "https://cdn.nobitex.ir/marketing/DynamicPromotionAssets/RialDepositAssets/clock-stopwatch_outlined.svg",
+            "text": "تابع سیکل‌های پایا و به‌صورت خودکار"
+          },
+          {
+            "icon": "https://cdn.nobitex.ir/marketing/DynamicPromotionAssets/RialDepositAssets/bank_outlined.svg",
+            "text": "پشتیبانی از همه‌ی بانک‌ها"
+          }
+        ],
+        "cta": {
+          "url": "/panel/balance/deposit/verified/",
+          "text": "برو به واریز شناسه‌دار"
+        }
+      },
+      {
+        "feature_flags": ["CobankCards"],
+        "subtitle": "واریز کارت به کارت",
+        "subtitle_media": {
+          "media_type": "icon",
+          "dark_media_url": "https://cdn.nobitex.ir/marketing/DynamicPromotionAssets/RialDepositAssets/credit-card-01_outlined.svg",
+          "light_media_url": "https://cdn.nobitex.ir/marketing/DynamicPromotionAssets/RialDepositAssets/credit-card-01_outlined.svg"
+        },
+        "description": "انتقال وجه از روش کارت به کارت بدون محدودیت",
+        "texts": [
+          {
+            "icon": "https://cdn.nobitex.ir/marketing/DynamicPromotionAssets/RialDepositAssets/align-top-01_outlined.svg",            "text": "۱۰ میلیون تومان به ازای هر کارت"
+          },
+          {
+            "icon": "https://cdn.nobitex.ir/marketing/DynamicPromotionAssets/RialDepositAssets/clock-stopwatch_outlined.svg",
+            "text": "حداکثر ۳۰ دقیقه و به صورت خودکار"
+          },
+          {
+            "icon": "https://cdn.nobitex.ir/marketing/DynamicPromotionAssets/RialDepositAssets/bank_outlined.svg",
+            "text": "پشتیبانی از تمام بانک‌ها و اپلیکیشن‌های بانکی"
+          }
+        ],
+        "cta": {
+          "url": "/panel/balance/deposit/card-to-card/",
+          "text": "برو به واریز کارت به کارت"
+        }
+      }
+    ]
+  }
+]
