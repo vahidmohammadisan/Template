@@ -1,9 +1,10 @@
-Clean modular
+Clean Architecture and Modular
 Jetpack Compose
-conventions
-version catalogs
+Compose Navigation
 MVI
-Hilt DI
-Kotlin
+Hilt
 Coroutines
 Kotlin Flow
+Conventions
+Version catalogs
+Ofline First Structure
