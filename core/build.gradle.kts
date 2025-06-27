@@ -8,7 +8,7 @@ android {
     namespace = "ir.vahidmohammadisan.newtemplate.core"
 
     defaultConfig {
-        buildConfigField("String", "SPACEX_API_URL", "\"https://api.spacexdata.com/v4/\"")
+        buildConfigField("String", "COIN_API_URL", "\"https://api.coinlore.net\"")
     }
 
     buildFeatures {

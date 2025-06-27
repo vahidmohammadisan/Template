@@ -2,15 +2,21 @@
   "formatVersion": 1,
   "database": {
     "version": 1,
-    "identityHash": "cec3084cfdc962b97dbc07a2607f6315",
+    "identityHash": "aa3d2c7117ef00f480b2ed67efffee25",
     "entities": [
       {
-        "tableName": "RocketCached",
-        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`id` TEXT NOT NULL, `name` TEXT NOT NULL, `cost_per_launch` INTEGER NOT NULL, `first_flight_date` TEXT NOT NULL, `height` INTEGER NOT NULL, `weight` INTEGER NOT NULL, `wiki_url` TEXT NOT NULL, `image_url` TEXT NOT NULL, PRIMARY KEY(`id`))",
+        "tableName": "CoinCached",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`id` TEXT NOT NULL, `symbol` TEXT NOT NULL, `name` TEXT NOT NULL, `rank` INTEGER NOT NULL, `price_usd` REAL NOT NULL, `percent_change_1h` REAL NOT NULL, `percent_change_24h` REAL NOT NULL, `percent_change_7d` REAL NOT NULL, `market_cap_usd` REAL NOT NULL, `volume_24h` REAL NOT NULL, `circulating_supply` REAL NOT NULL, `max_supply` REAL, PRIMARY KEY(`id`))",
         "fields": [
           {
             "fieldPath": "id",
             "columnName": "id",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "symbol",
+            "columnName": "symbol",
             "affinity": "TEXT",
             "notNull": true
           },
@@ -21,40 +27,58 @@
             "notNull": true
           },
           {
-            "fieldPath": "costPerLaunch",
-            "columnName": "cost_per_launch",
+            "fieldPath": "rank",
+            "columnName": "rank",
             "affinity": "INTEGER",
             "notNull": true
           },
           {
-            "fieldPath": "firstFlightDate",
-            "columnName": "first_flight_date",
-            "affinity": "TEXT",
+            "fieldPath": "priceUsd",
+            "columnName": "price_usd",
+            "affinity": "REAL",
             "notNull": true
           },
           {
-            "fieldPath": "height",
-            "columnName": "height",
-            "affinity": "INTEGER",
+            "fieldPath": "percentChange1h",
+            "columnName": "percent_change_1h",
+            "affinity": "REAL",
             "notNull": true
           },
           {
-            "fieldPath": "weight",
-            "columnName": "weight",
-            "affinity": "INTEGER",
+            "fieldPath": "percentChange24h",
+            "columnName": "percent_change_24h",
+            "affinity": "REAL",
             "notNull": true
           },
           {
-            "fieldPath": "wikiUrl",
-            "columnName": "wiki_url",
-            "affinity": "TEXT",
+            "fieldPath": "percentChange7d",
+            "columnName": "percent_change_7d",
+            "affinity": "REAL",
             "notNull": true
           },
           {
-            "fieldPath": "imageUrl",
-            "columnName": "image_url",
-            "affinity": "TEXT",
+            "fieldPath": "marketCapUsd",
+            "columnName": "market_cap_usd",
+            "affinity": "REAL",
             "notNull": true
+          },
+          {
+            "fieldPath": "volume24",
+            "columnName": "volume_24h",
+            "affinity": "REAL",
+            "notNull": true
+          },
+          {
+            "fieldPath": "circulatingSupply",
+            "columnName": "circulating_supply",
+            "affinity": "REAL",
+            "notNull": true
+          },
+          {
+            "fieldPath": "maxSupply",
+            "columnName": "max_supply",
+            "affinity": "REAL",
+            "notNull": false
           }
         ],
         "primaryKey": {
@@ -70,7 +94,7 @@
     "views": [],
     "setupQueries": [
       "CREATE TABLE IF NOT EXISTS room_master_table (id INTEGER PRIMARY KEY,identity_hash TEXT)",
-      "INSERT OR REPLACE INTO room_master_table (id,identity_hash) VALUES(42, 'cec3084cfdc962b97dbc07a2607f6315')"
+      "INSERT OR REPLACE INTO room_master_table (id,identity_hash) VALUES(42, 'aa3d2c7117ef00f480b2ed67efffee25')"
     ]
   }
 }

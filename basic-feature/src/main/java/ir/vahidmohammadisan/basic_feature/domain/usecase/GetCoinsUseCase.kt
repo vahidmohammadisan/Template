@@ -1,7 +1,7 @@
 package ir.vahidmohammadisan.basic_feature.domain.usecase
 
-import ir.vahidmohammadisan.basic_feature.domain.model.Rocket
-import ir.vahidmohammadisan.basic_feature.domain.repository.RocketRepository
+import ir.vahidmohammadisan.basic_feature.domain.model.Coin
+import ir.vahidmohammadisan.basic_feature.domain.repository.CoinRepository
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.catch
@@ -11,12 +11,12 @@ import java.io.IOException
 
 private const val RETRY_TIME_IN_MILLIS = 15_000L
 
-fun interface GetRocketsUseCase : () -> Flow<Result<List<Rocket>>>
+fun interface GetCoinsUseCase : () -> Flow<Result<List<Coin>>>
 
-fun getRockets(
-    rocketRepository: RocketRepository,
-): Flow<Result<List<Rocket>>> = rocketRepository
-    .getRockets()
+fun getCoins(
+    coinRepository: CoinRepository,
+): Flow<Result<List<Coin>>> = coinRepository
+    .getCoins()
     .map {
         Result.success(it)
     }

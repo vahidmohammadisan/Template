@@ -15,7 +15,7 @@ import androidx.compose.ui.text.style.TextAlign
 import ir.vahidmohammadisan.newtemplate.basicfeature.R
 
 @Composable
-fun RocketsErrorContent(
+fun CoinsErrorContent(
     modifier: Modifier = Modifier,
 ) {
     Box(
@@ -25,7 +25,7 @@ fun RocketsErrorContent(
         contentAlignment = Alignment.Center,
     ) {
         Text(
-            text = stringResource(id = R.string.rockets_error_fetching),
+            text = stringResource(id = R.string.coins_error_fetching),
             color = Color.Red,
             textAlign = TextAlign.Center,
             style = MaterialTheme.typography.headlineSmall,

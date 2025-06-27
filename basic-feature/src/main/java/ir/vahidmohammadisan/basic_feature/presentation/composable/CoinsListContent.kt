@@ -4,20 +4,21 @@ import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.itemsIndexed
 import androidx.compose.material3.HorizontalDivider
+import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.testTag
 import androidx.compose.ui.res.dimensionResource
-import ir.vahidmohammadisan.basic_feature.presentation.model.RocketDisplayable
+import ir.vahidmohammadisan.basic_feature.presentation.model.CoinDisplayable
 import ir.vahidmohammadisan.newtemplate.basicfeature.R
 
-const val ROCKET_DIVIDER_TEST_TAG = "rocketDividerTestTag"
+const val COIN_TEST_TAG = "coinTestTag"
 
 @Composable
-fun RocketsListContent(
-    rocketList: List<RocketDisplayable>,
+fun CoinsListContent(
+    coinList: List<CoinDisplayable>,
     modifier: Modifier = Modifier,
-    onRocketClick: (String) -> Unit,
+    onCoinClick: (String) -> Unit,
 ) {
     LazyColumn(
         modifier = modifier
@@ -26,17 +27,21 @@ fun RocketsListContent(
             ),
     ) {
         itemsIndexed(
-            items = rocketList,
-            key = { _, rocket -> rocket.id },
+            items = coinList,
+            key = { _, coin -> coin.id },
         ) { index, item ->
-            RocketItem(
-                rocket = item,
-                onRocketClick = { onRocketClick(item.wikiUrl) },
+            Text(
+                text = item.symbol,
+                modifier = Modifier
+                    .padding(
+                        vertical = dimensionResource(id = R.dimen.dimen_small),
+                    )
+                    .testTag(COIN_TEST_TAG),
             )
 
-            if (index < rocketList.lastIndex) {
+            if (index < coinList.lastIndex) {
                 HorizontalDivider(
-                    modifier = Modifier.testTag(ROCKET_DIVIDER_TEST_TAG),
+                    modifier = Modifier.testTag(COIN_TEST_TAG),
                 )
             }
         }

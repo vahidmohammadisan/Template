@@ -7,25 +7,25 @@ import dagger.hilt.InstallIn
 import dagger.hilt.android.components.ViewModelComponent
 import dagger.hilt.components.SingletonComponent
 import dagger.multibindings.IntoSet
-import ir.vahidmohammadisan.basic_feature.presentation.RocketsNavigationFactory
-import ir.vahidmohammadisan.basic_feature.presentation.RocketsUiState
+import ir.vahidmohammadisan.basic_feature.presentation.CoinsNavigationFactory
+import ir.vahidmohammadisan.basic_feature.presentation.home.contract.CoinsUiState
 import ir.vahidmohammadisan.core.navigation.NavigationFactory
 import javax.inject.Singleton
 
 @Module
 @InstallIn(ViewModelComponent::class)
-internal object RocketsViewModelModule {
+internal object CoinsViewModelModule {
 
     @Provides
-    fun provideInitialRocketsUiState(): RocketsUiState = RocketsUiState()
+    fun provideInitialCoinsUiState(): CoinsUiState = CoinsUiState()
 }
 
 @Module
 @InstallIn(SingletonComponent::class)
-internal interface RocketsSingletonModule {
+internal interface CoinsSingletonModule {
 
     @Singleton
     @Binds
     @IntoSet
-    fun bindRocketsNavigationFactory(factory: RocketsNavigationFactory): NavigationFactory
+    fun bindCoinsNavigationFactory(factory: CoinsNavigationFactory): NavigationFactory
 }

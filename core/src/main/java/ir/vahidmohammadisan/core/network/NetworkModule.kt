@@ -59,7 +59,7 @@ internal object NetworkModule {
         return Retrofit
             .Builder()
             .addConverterFactory(json.asConverterFactory(contentType))
-            .baseUrl(BuildConfig.SPACEX_API_URL)
+            .baseUrl(BuildConfig.COIN_API_URL)
             .client(okHttpClient)
             .build()
     }

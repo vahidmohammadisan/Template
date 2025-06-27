@@ -1,6 +1,6 @@
 [versions]
 # plugins
-android-gradle                      = "8.2.2"
+android-gradle                      = "8.9"
 detekt                              = "1.23.5"
 detekt-compose-rules                = "0.3.11"
 junit                               = "1.10.0.0"

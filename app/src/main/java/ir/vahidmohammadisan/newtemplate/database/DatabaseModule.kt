@@ -7,7 +7,7 @@ import dagger.Provides
 import dagger.hilt.InstallIn
 import dagger.hilt.android.qualifiers.ApplicationContext
 import dagger.hilt.components.SingletonComponent
-import ir.vahidmohammadisan.basic_feature.data.local.dao.RocketDao
+import ir.vahidmohammadisan.basic_feature.data.local.dao.CoinDao
 import javax.inject.Singleton
 
 private const val APP_DATABASE_NAME = "app_database_name"
@@ -30,7 +30,7 @@ internal object DatabaseModule {
 
     @Singleton
     @Provides
-    fun provideRocketDao(database: AppDatabase): RocketDao {
-        return database.rocketDao()
+    fun provideCoinDao(database: AppDatabase): CoinDao {
+        return database.coinDao()
     }
 }

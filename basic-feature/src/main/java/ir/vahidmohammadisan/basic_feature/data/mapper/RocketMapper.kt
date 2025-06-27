@@ -1,40 +1,50 @@
 package ir.vahidmohammadisan.basic_feature.data.mapper
 
-import ir.vahidmohammadisan.basic_feature.data.local.model.RocketCached
-import ir.vahidmohammadisan.basic_feature.data.remote.model.RocketResponse
-import ir.vahidmohammadisan.basic_feature.domain.model.Rocket
-import java.time.LocalDate
-import java.time.format.DateTimeFormatter
+import ir.vahidmohammadisan.basic_feature.data.local.model.CoinCached
+import ir.vahidmohammadisan.basic_feature.data.remote.model.CoinResponse
+import ir.vahidmohammadisan.basic_feature.domain.model.Coin
 
-fun RocketResponse.toDomainModel() = Rocket(
+fun CoinResponse.toDomainModel() = Coin(
     id = id,
+    symbol = symbol,
     name = name,
-    costPerLaunch = costPerLaunch,
-    firstFlight = LocalDate.parse(firstFlightDate),
-    height = height.meters.toInt(),
-    weight = weight.kg,
-    wikiUrl = wikiUrl,
-    imageUrl = imageUrls.random(),
+    rank = rank,
+    priceUsd = priceUsd.toDoubleOrNull() ?: 0.0,
+    percentChange1h = percentChange1h.toDoubleOrNull() ?: 0.0,
+    percentChange24h = percentChange24h.toDoubleOrNull() ?: 0.0,
+    percentChange7d = percentChange7d.toDoubleOrNull() ?: 0.0,
+    marketCapUsd = marketCapUsd.toDoubleOrNull() ?: 0.0,
+    volume24 = volume24,
+    circulatingSupply = circulatingSupply.toDoubleOrNull() ?: 0.0,
+    maxSupply = maxSupply?.toDoubleOrNull()
 )
 
-fun RocketCached.toDomainModel() = Rocket(
+fun CoinCached.toDomainModel() = Coin(
     id = id,
+    symbol = symbol,
     name = name,
-    costPerLaunch = costPerLaunch,
-    firstFlight = LocalDate.parse(firstFlightDate),
-    height = height,
-    weight = weight,
-    wikiUrl = wikiUrl,
-    imageUrl = imageUrl,
+    rank = rank,
+    priceUsd = priceUsd,
+    percentChange1h = percentChange1h,
+    percentChange24h = percentChange24h,
+    percentChange7d = percentChange7d,
+    marketCapUsd = marketCapUsd,
+    volume24 = volume24,
+    circulatingSupply = circulatingSupply,
+    maxSupply = maxSupply
 )
 
-fun Rocket.toEntityModel() = RocketCached(
+fun Coin.toEntityModel() = CoinCached(
     id = id,
+    symbol = symbol,
     name = name,
-    costPerLaunch = costPerLaunch,
-    firstFlightDate = firstFlight.format(DateTimeFormatter.ISO_LOCAL_DATE),
-    height = height,
-    weight = weight,
-    wikiUrl = wikiUrl,
-    imageUrl = imageUrl,
+    rank = rank,
+    priceUsd = priceUsd,
+    percentChange1h = percentChange1h,
+    percentChange24h = percentChange24h,
+    percentChange7d = percentChange7d,
+    marketCapUsd = marketCapUsd,
+    volume24 = volume24,
+    circulatingSupply = circulatingSupply,
+    maxSupply = maxSupply
 )

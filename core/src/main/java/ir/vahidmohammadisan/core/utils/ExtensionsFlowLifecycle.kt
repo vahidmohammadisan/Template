@@ -9,7 +9,6 @@ import androidx.lifecycle.LifecycleOwner
 import androidx.lifecycle.flowWithLifecycle
 import kotlinx.coroutines.flow.Flow
 
-// Based on: https://stackoverflow.com/a/70185157/4385799 and https://medium.com/androiddevelopers/a-safer-way-to-collect-flows-from-android-uis-23080b1f8bda
 @Composable
 inline fun <reified T> Flow<T>.collectWithLifecycle(
     key: Any = Unit,

@@ -3,6 +3,7 @@ plugins {
     id("template.android.compose.library")
     id("template.android.hilt")
     id("kotlin-parcelize")
+    id("kotlinx-serialization")
 
 }
 
@@ -22,6 +23,7 @@ dependencies {
     implementation(libs.navigation)
     implementation(libs.navigation.hilt)
     implementation(libs.kotlin.serialization)
+    implementation(libs.kotlin.serialization.converter)
     implementation(libs.retrofit)
     implementation(libs.room)
     implementation(libs.timber)
